@@ -3,8 +3,8 @@ backend:
   phases:
     preBuild:
       commands:
+        # keep Amplify CLI up to date (optional but safe)
         - npm install -g @aws-amplify/cli@latest
-        - npm install -g @aws-amplify/hosting-amplify-cli
     build:
       commands:
         - npm ci --cache .npm --prefer-offline
